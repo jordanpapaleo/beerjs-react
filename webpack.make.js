@@ -30,7 +30,7 @@ module.exports = function makeWebpackConfig (options) {
    * Reference: http://webpack.github.io/docs/configuration.html
    * This is the object where all configuration gets set
    */
-  var config = {}
+  var config = {};
 
   /**
    * Entry
@@ -114,7 +114,7 @@ module.exports = function makeWebpackConfig (options) {
       test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
       loader: 'file'
     }]
-  }
+  };
 
   // ISPARTA LOADER
   // Reference: https://github.com/ColCh/isparta-instrumenter-loader
@@ -137,7 +137,7 @@ module.exports = function makeWebpackConfig (options) {
     test: /\.jsx$/,
     loader: 'babel?optional[]=runtime',
     exclude: /node_modules/
-  }
+  };
 
   // Add react-hot-loader when not in build or test mode
   if (!BUILD && !TEST) {
@@ -163,7 +163,7 @@ module.exports = function makeWebpackConfig (options) {
     // Reference: https://github.com/webpack/style-loader
     // Use style-loader in development for hot-loading
     loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
-  }
+  };
 
   // Skip loading css in test mode
   if (TEST) {
@@ -186,7 +186,7 @@ module.exports = function makeWebpackConfig (options) {
         browsers: ['last 2 versions']
       })
     ]
-  }
+  };
 
   /**
    * Resolve
@@ -198,7 +198,7 @@ module.exports = function makeWebpackConfig (options) {
     // Allows you to require files that end with .jsx without typing it
     // For example, if you have file.jsx, you can type: require('./file')
     extensions: ['', '.js', '.jsx']
-  }
+  };
 
   /**
    * Plugins
@@ -219,7 +219,7 @@ module.exports = function makeWebpackConfig (options) {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
     })
-  ]
+  ];
 
   // Skip rendering index.html in test mode
   if (!TEST) {
@@ -263,7 +263,7 @@ module.exports = function makeWebpackConfig (options) {
       colors: true,
       chunk: false
     }
-  }
+  };
 
   return config
-}
+};
