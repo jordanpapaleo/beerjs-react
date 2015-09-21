@@ -1,44 +1,57 @@
-import './Hello.css';
+import './HelloES6.css';
 import React, { PropTypes } from 'react';
 import DateService from '../DateService';
 import MoodService from '../MoodService';
 
-const Hello = React.createClass({
-    propTypes: {
-        // optional: Sets the data type of a property
-        name: PropTypes.string
-    },
-    getDefaultProps() {
-        // optional: sets a default property value
+class HelloES6 extends React.Component {
+    // optional: Sets the data type of a property
+    static get propTypes() {
+        return {
+            name: PropTypes.string
+        };
+    }
+
+    // optional: sets a default property value
+    static get defaultProps() {
         return {
             name: 'World'
         };
-    },
-    getInitialState() {
-        //optional: allows for the state to be set pre render
-        return {
+    }
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
             mood: '',
             time: ''
         };
-    },
-    componentDidMount() {
+
+        //this.tick = this.tick.bind(this);
+        //this.getMood = this.getMood.bind(this);
+    }
+
+    /*componentDidMount() {
         this.interval = setInterval(this.tick, 1000);
-    },
+    }
+
     componentWillUnmount() {
         clearInterval(this.interval);
-    },
-    tick() {
+    }*/
+
+    /*tick() {
         this.setState({
             time: DateService.getTime()
         });
-    },
+    }
+
     getMood() {
         this.setState({
             mood: MoodService.getMood()
         });
-    },
-    render() {
-        // REQUIRED: the render function for this component
+    }*/
+
+    // REQUIRED: the render function for this component
+    /*render () {
         return (
             <div>
                 <h1 className='hello'>Hello {this.props.name}!</h1>
@@ -48,7 +61,11 @@ const Hello = React.createClass({
                 {(this.state.mood) ? <p>You are {this.state.mood}</p> : ''}
             </div>
         );
-    }
-});
+    }*/
 
-export default Hello;
+    render() {
+        return(
+            <div>Hello</div>
+        );
+    }
+}
