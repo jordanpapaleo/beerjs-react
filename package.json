@@ -2,24 +2,16 @@
   "name": "beerjs-react",
   "version": "1.0.0",
   "description": "BeerJS Demo for ReactJS using webpack",
-  "main": "./app/index.js",
+  "main": "./src/index.js",
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.build.js --bail -p",
-    "dev": "webpack-dev-server --history-api-fallback --hot --inline --progress",
-    "test": "npm run test:unit",
-    "test:unit": "karma start",
-    "test:unit:live": "karma start --auto-watch --no-single-run"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jordanpapaleo/beerjs-react.git"
+    "dev": "webpack-dev-server --history-api-fallback --hot --inline --progress"
   },
   "keywords": [
     "web",
     "application"
   ],
-  "author": "Jordan",
   "license": "MIT",
   "standard": {
     "parser": "babel-eslint"
@@ -30,6 +22,7 @@
     "babel-core": "^5.6.15",
     "babel-loader": "^5.2.2",
     "babel-runtime": "^5.6.15",
+    "bootstrap": "^3.3.5",
     "css-loader": "^0.15.1",
     "debug": "^2.2.0",
     "extract-text-webpack-plugin": "^0.8.2",
@@ -49,17 +42,8 @@
     "eslint-plugin-react": "^2.6.4",
     "expect.js": "^0.3.1",
     "isparta-instrumenter-loader": "^0.2.1",
-    "karma": "^0.12.37",
-    "karma-coverage": "^0.4.1",
-    "karma-mocha": "^0.2.0",
-    "karma-phantomjs-launcher": "^0.2.0",
-    "karma-sourcemap-loader": "^0.3.5",
-    "karma-spec-reporter": "0.0.19",
-    "karma-webpack": "^1.5.1",
     "mocha": "^2.2.5",
     "null-loader": "^0.1.1",
-    "phantomjs": "^1.9.17",
-    "phantomjs-polyfill": "0.0.1",
     "react-hot-loader": "^1.2.7",
     "standard": "^4.5.2",
     "style-loader": "^0.12.3",

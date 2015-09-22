@@ -1,4 +1,5 @@
-import './Hello.css';
+import './style.css';
+
 import React, { PropTypes } from 'react';
 import DateService from '../DateService';
 import MoodService from '../MoodService';
@@ -41,11 +42,11 @@ const Hello = React.createClass({
         // REQUIRED: the render function for this component
         return (
             <div>
-                <h1 className='hello'>Hello {this.props.name}!</h1>
+                <h1 className='hello'>Create Class Hello {this.props.name}!</h1>
                 <h3>Today's date is {DateService.getDate()}</h3>
                 <h4>The current time is {this.state.time}</h4>
-                <button onClick={this.getMood}>Get your mood</button>
-                {(this.state.mood) ? <p>You are {this.state.mood}</p> : ''}
+                <button className='btn btn-primary' onClick={this.getMood}>Get your mood</button>
+                {(this.state.mood) ? <h2>You are {this.state.mood}.</h2> : ''}
             </div>
         );
     }

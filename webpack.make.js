@@ -1,8 +1,8 @@
 // Modules
-var webpack = require('webpack')
-var autoprefixer = require('autoprefixer-core')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var webpack = require('webpack');
+var autoprefixer = require('autoprefixer-core');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 /**
  * Make webpack config
@@ -17,13 +17,13 @@ module.exports = function makeWebpackConfig (options) {
    * BUILD is for generating minified builds
    * TEST is for generating test builds
    */
-  var BUILD = !!options.BUILD
-  var TEST = !!options.TEST
+  var BUILD = !!options.BUILD;
+  var TEST = !!options.TEST;
 
   /**
    * Environment values
    */
-  var NODE_ENV = process.env.NODE_ENV || 'development'
+  var NODE_ENV = process.env.NODE_ENV || 'development';
 
   /**
    * Config
@@ -42,7 +42,7 @@ module.exports = function makeWebpackConfig (options) {
     config.entry = {}
   } else {
     config.entry = {
-      app: './app'
+      app: './src'
     }
   }
 
